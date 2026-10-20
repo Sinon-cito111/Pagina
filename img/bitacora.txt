@@ -1,0 +1,11 @@
+la url:http://127.0.0.1:5500/index.html
+protocolo: http
+host: 127.0.0.1.
+puerto: 5500
+ruta: /index.html
+metodo: GET
+codigo de estado: 304 Not Modified
+
+Sale el codigo 404 que significa que no encontro respuesta al hacer esa peticion
+
+el HTML sera el esqueleto de la pagina rueda libre, CSS lo "bonito" y JavaScript lo que hara que funcione
