@@ -16,8 +16,49 @@
   </nav>
 
   <h1>Reserva tu bicicleta</h1>
-  <p>Muy pronto podrás reservar desde un formulario en esta página. Mientras tanto, escríbenos y te ayudamos con tu reserva.</p>
-
+  <main>
+    <form action="#" method="post">
+      <fieldset> 
+        <legend> Datos personales </legend>
+      <p> <label for="nombre"> Nombre Completo*</label><br>
+   <input type="text" id="nombre" name="nombre" required> 
+     </p>
+     <p> <label for="Documento"> Documento identidad* </label><br>
+      <input type="text" id="Documento" name="Documento identidad" required>
+     </p>
+     <p> <label for="correo"> Correo Electronico* </label><br>
+     <input type="email" id="correo" name="correo" required>
+       </p>
+       <p><label for="Celular"> Celular </label><br>
+        <input type="text" id="celular" name="Celular" required>
+       </p>
+      </fieldset>
+      <fieldset>
+        <legend> Tu alquiler</legend>
+        <p> <label for="fecha"> Fecha de alquiler*</label><br>
+          <input type="date" id="fecha" name="fecha" required>
+        </p>
+        <p> <label for="bicicleta"> Tipo de bicicleta*</label><br>
+     <select id="bicicleta" name="bicicleta">
+       <option value="Urbana"> Bicicleta Urbana</option>
+       <option value="Montaña"> Bicicleta de montaña </option>
+       <option value="Electrica"> Bicicleta electrica </option>
+       </select>
+       </p>
+       <p> <label for="Plan"> Plan a elegir*</label><br>
+        <select id="plan"> name="plan a elegir"
+        <option value="1 hora"> 1 Hora</option>
+        <option value="4 horas"> 4 Horas</option>
+        <option value="Dia completo"> Dia completo</option>
+       </p>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend> Confirmacion</legend>
+      </fieldset>
+     <button type="submit"> Enviar reserva </button>
+    </form>
+  </main>
   <section>
     <h2>Contacto</h2>
     <p>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
