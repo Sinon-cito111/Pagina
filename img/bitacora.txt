@@ -9,3 +9,56 @@ codigo de estado: 304 Not Modified
 Sale el codigo 404 que significa que no encontro respuesta al hacer esa peticion
 
 el HTML sera el esqueleto de la pagina rueda libre, CSS lo "bonito" y JavaScript lo que hara que funcione
+
+┌──────────────────────────────────────┐
+│ HEADER   h1 "Rueda Libre" + bienvenida│
+├──────────────────────────────────────┤
+│ NAV      Inicio | Tarifas | Reservas  │
+├──────────────────────────────────────┤
+│ MAIN                                  │
+│  ┌─ SECTION  ¿Quiénes somos?          │
+│  ├─ SECTION  Nuestros servicios       │
+│  │   ├─ ARTICLE  Alquiler por horas   │
+│  │   ├─ ARTICLE  Alquiler por día     │
+│  │   └─ ARTICLE  Tours guiados        │
+│  ├─ SECTION  ¿Cómo alquilar?          │
+│  └─ SECTION  Encuéntranos             │
+│  ASIDE   Beneficios del servicio      │
+├──────────────────────────────────────┤
+│ FOOTER   Rueda Libre | correo | 2026  │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ HEADER   logo + h1 "Tarifas"          │
+├──────────────────────────────────────┤
+│ NAV      Inicio | Tarifas | Reservas  │
+├──────────────────────────────────────┤
+│ MAIN                                  │
+│  ┌─ SECTION  Tarifas de alquiler      │
+│  │   └─ tabla                         │
+│  ├─ SECTION#tours  Tours              │
+│  │   └─ tabla + enlace "Reservar ahora"│
+│  └─ SECTION  Información adicional    │
+│      ├─ ARTICLE  Casco y candado      │
+│      └─ ARTICLE  Horarios de salida   │
+│  ASIDE   ¿Qué llevar? (lista)         │
+├──────────────────────────────────────┤
+│ FOOTER   Rueda Libre | correo | 2026  │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ HEADER   h1 "Reserva tu bicicleta"    │
+├──────────────────────────────────────┤
+│ NAV      Inicio | Tarifas | Reservas  │
+├──────────────────────────────────────┤
+│ MAIN                                  │
+│  ┌─ SECTION  Contacto (correo)        │
+│  ├─ SECTION  Horario de atención (dl) │
+│  └─ SECTION  Formulario de reserva    │
+│  ASIDE   Aviso: reservas por correo   │
+│          mientras llega el formulario │
+├──────────────────────────────────────┤
+│ FOOTER   Rueda Libre | correo | 2026  │
+└──────────────────────────────────────┘
+
+no tengo ningun <div> o <span> en el codigo
