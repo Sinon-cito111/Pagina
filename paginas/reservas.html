@@ -17,29 +17,43 @@
 
   <h1>Reserva tu bicicleta</h1>
   <main>
+    <section id="politicas">
+      <h2>Politicas de alquiler</h2>
+      <ol>
+        <li>Traer tu documento al reclamar la bicicleta</li>
+        <li>Traer la bicicleta a la hora acordada; si no habra multa</li>
+        <li>El cliente responde por daños/perdidas de bicicleta,casco y candados</li>
+        <li>La cancelacion de la reserva se hace con 1 dia de anticipacion</li>
+      </ol>
+    </section>
     <form action="#" method="post">
       <fieldset> 
         <legend> Datos personales </legend>
       <p> <label for="nombre"> Nombre Completo*</label><br>
-   <input type="text" id="nombre" name="nombre" required> 
+   <input type="text" id="nombre" name="nombre" required minlegth="3"> 
      </p>
      <p> <label for="Documento"> Documento identidad* </label><br>
-      <input type="text" id="Documento" name="Documento identidad" required>
+      <input type="text" id="Documento" name="Documento identidad" required
+      inputmode="numeric" pattern="[0-9]{6,10}"
+      title="Escribe sin puntos ni comas">
      </p>
      <p> <label for="correo"> Correo Electronico* </label><br>
      <input type="email" id="correo" name="correo" required>
        </p>
-       <p><label for="Celular"> Celular </label><br>
-        <input type="text" id="celular" name="Celular" required>
+       <p><label for="Celular"> Celular* </label><br>
+        <input type="text" id="celular" name="Celular" required
+        pattern="3[0-9]{9}" maxlength="10"
+           title="Escribe 10 dígitos que empiecen por 3">
        </p>
       </fieldset>
       <fieldset>
         <legend> Tu alquiler</legend>
         <p> <label for="fecha"> Fecha de alquiler*</label><br>
-          <input type="date" id="fecha" name="fecha" required>
+          <input type="date" id="fecha" name="fecha" required
+          min="2026-11-01" max="2026-12-31">
         </p>
         <p> <label for="bicicleta"> Tipo de bicicleta*</label><br>
-     <select id="bicicleta" name="bicicleta">
+     <select id="bicicleta" name="bicicleta" required>
        <option value="Urbana"> Bicicleta Urbana</option>
        <option value="Montaña"> Bicicleta de montaña </option>
        <option value="Electrica"> Bicicleta electrica </option>
@@ -51,14 +65,23 @@
         <option value="4 horas"> 4 Horas</option>
         <option value="Dia completo"> Dia completo</option>
        </p>
+       <p> <label for="cantidad de bicicletas"> Cantidad de bicicletas* </label><br>
+        <input type="number" id="cantidad" name="cantidad bicicletas" required
+        min="1" max="6">
+      </p>
         </select>
       </fieldset>
       <fieldset>
         <legend> Confirmacion</legend>
         <p> <label for="confirmacion"> Confirmacion*</label><br>
-          <input type="text" id="confirmacion" name="confirmacion">
+          <textarea id="comentarios" name="comentarios" rows="6" cols="120" maxlength="300"></textarea>
         </p>
       </fieldset>
+      <p>
+        <input type="checkbox" id="politicas-acepto" name="politicas-acepto" required>
+        <label for="politicas-acepto"> He leido y acepto las <a href="#politicas">politicas de alquiler</a>*
+        </label>
+      </p>
      <button type="submit"> Enviar reserva </button>
     </form>
   </main>
