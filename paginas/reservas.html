@@ -12,12 +12,13 @@
 </head>
 <body>
   <h1>Reserva tu bicicleta</h1>
-    <nav>
-    <ul>
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="tarifas.html">Tarifas y rutas</a></li>
-      <li><a href="reservas.html">Reservas</a></li>
-    </ul>
+<nav aria-label="Menú principal">
+  <ul id="menu">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="tarifas.html">Tarifas y rutas</a></li>
+    <li><a href="reservas.html" class="activo" aria-current="page">Reservas</a></li>
+  </ul>
+</nav>
   <main>
     <section id="politicas">
       <h2>Politicas de alquiler</h2>
@@ -84,7 +85,7 @@
         <label for="politicas-acepto"> He leido y acepto las <a href="#politicas">politicas de alquiler</a>*
         </label>
       </p>
-     <button type="submit"> Enviar reserva </button>
+<button type="submit" class="boton-cta">Enviar reserva</button>
     </form>
   </main>
   <section>

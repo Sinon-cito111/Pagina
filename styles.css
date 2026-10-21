@@ -21,3 +21,108 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--fuente-titulos);
 }
+#menu a {
+    color: var(--gris-asfalto)
+}
+
+#menu a:hover {
+    color: var(--azul-noche);
+    text-decoration: underline;
+}
+
+#menu a:focus-visible {
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 3px;
+}
+
+#menu a.activo {
+  color: var(--verde-ruta);
+  font-weight: 600;
+  border-bottom: 3px solid var(--verde-ruta);
+}
+a:focus-visible {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 3px;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-s);
+  margin: 0;
+  padding: 0;
+}
+
+#menu a {
+  display: inline-block;
+  padding: var(--espacio-xs) var(--espacio-s);
+  color: var(--gris-asfalto);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+#menu a:hover,
+#menu a:focus {
+  color: var(--azul-noche);
+  border-bottom-color: var(--azul-noche);
+  text-decoration: underline;
+}
+
+#menu a.activo {
+  color: var(--verde-ruta);
+  font-weight: 600;
+  border-bottom-color: var(--verde-ruta);
+}
+
+.boton-cta {
+  display: inline-block;
+  padding: var(--espacio-xs) var(--espacio-m);
+  background-color: var(--verde-ruta);
+  color: var(--blanco);
+  border: 2px solid var(--verde-ruta);
+  border-radius: 0.5rem;
+  font-family: var(--fuente-titulos);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton-cta:hover,
+.boton-cta:focus {
+  background-color: var(--azul-noche);
+  border-color: var(--azul-noche);
+  color: var(--crema);
+}
+
+.boton-cta:active {
+  background-color: var(--naranja-pedal);
+  border-color: var(--azul-noche);
+  color: var(--azul-noche);
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: var(--azul-noche);
+  background-color: var(--blanco);
+  border: 2px solid var(--gris-asfalto);
+  border-radius: 0.25rem;
+  padding: var(--espacio-xs);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
+  border-color: var(--azul-noche);
+}
