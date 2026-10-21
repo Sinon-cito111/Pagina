@@ -1,0 +1,23 @@
+:root {
+  --verde-ruta: #1E7A4F;
+  --naranja-pedal: #F39A2B;
+  --azul-noche: #14213D;
+  --crema: #FAF6EF;
+  --gris-asfalto: #5B6470;
+  --fuente-titulos:"Monserrat", Arial, sans-serif;
+  --fuente-texto:"Open sans", Arial, sans-serif;
+  --espacio-xs: 0.5rem;
+  --espacio-s: 1rem;
+  --espacio-m: 1.5rem;
+  --espacio-l: 2.5rem;
+  --espacio-xl: 4rem;
+}
+body {
+  font-family: var(--fuente-texto);
+  color: var(--azul-noche);
+  background-color: var(--crema);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulos);
+}
