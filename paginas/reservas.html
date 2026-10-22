@@ -1,111 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Reserva tu bicicleta en Rueda Libre, Medellín. Escríbenos por correo y consulta nuestro horario de atención.">
+  <meta name="description" content="Reserva tu bicicleta en Rueda Libre, Medellín. Llena el formulario, consulta las políticas de alquiler y nuestro horario de atención.">
   <title>Reservas | Rueda Libre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <nav aria-label="Menú principal">
-  <ul id="menu">
-    <li><a href="../index.html">Inicio</a></li>
-    <li><a href="tarifas.html">Tarifas y rutas</a></li>
-    <li><a href="reservas.html" class="activo" aria-current="page">Reservas</a></li>
-  </ul>
-</nav>
-  <h1>Reserva tu bicicleta</h1>
+    <ul id="menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="tarifas.html">Tarifas y rutas</a></li>
+      <li><a href="reservas.html" class="activo" aria-current="page">Reservas</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <img class="logo" src="../img/logo.png" alt="Logo de Rueda Libre" width="150">
+    <h1>Reserva tu bicicleta</h1>
+  </header>
+
   <main>
     <section id="politicas">
-      <h2>Politicas de alquiler</h2>
+      <h2>Políticas de alquiler</h2>
       <ol>
-        <li>Traer tu documento al reclamar la bicicleta</li>
-        <li>Traer la bicicleta a la hora acordada; si no habra multa</li>
-        <li>El cliente responde por daños/perdidas de bicicleta,casco y candados</li>
-        <li>La cancelacion de la reserva se hace con 1 dia de anticipacion</li>
+        <li>Traer tu documento al reclamar la bicicleta.</li>
+        <li>Devolver la bicicleta a la hora acordada; si no, se cobra multa.</li>
+        <li>El cliente responde por daños o pérdida de la bicicleta, el casco y el candado.</li>
+        <li>La cancelación de la reserva se hace con 1 día de anticipación.</li>
       </ol>
     </section>
-    <form action="#" method="post">
-      <fieldset> 
-        <legend> Datos personales </legend>
-      <p> <label for="nombre"> Nombre Completo*</label><br>
-   <input type="text" id="nombre" name="nombre" required minlegth="3"> 
-     </p>
-     <p> <label for="Documento"> Documento identidad* </label><br>
-      <input type="text" id="Documento" name="Documento identidad" required
-      inputmode="numeric" pattern="[0-9]{6,10}"
-      title="Escribe sin puntos ni comas">
-     </p>
-     <p> <label for="correo"> Correo Electronico* </label><br>
-     <input type="email" id="correo" name="correo" required>
-       </p>
-       <p><label for="Celular"> Celular* </label><br>
-        <input type="text" id="celular" name="Celular" required
-        pattern="3[0-9]{9}" maxlength="10"
-           title="Escribe 10 dígitos que empiecen por 3">
-       </p>
-      </fieldset>
-      <fieldset>
-        <legend> Tu alquiler</legend>
-        <p> <label for="fecha"> Fecha de alquiler*</label><br>
-          <input type="date" id="fecha" name="fecha" required
-          min="2026-11-01" max="2026-12-31">
-        </p>
-        <p> <label for="bicicleta"> Tipo de bicicleta*</label><br>
-     <select id="bicicleta" name="bicicleta" required>
-       <option value="Urbana"> Bicicleta Urbana</option>
-       <option value="Montaña"> Bicicleta de montaña </option>
-       <option value="Electrica"> Bicicleta electrica </option>
-       </select>
-       </p>
-       <p> <label for="Plan"> Plan a elegir*</label><br>
-        <select id="plan"> name="plan a elegir"
-        <option value="1 hora"> 1 Hora</option>
-        <option value="4 horas"> 4 Horas</option>
-        <option value="Dia completo"> Dia completo</option>
-       </p>
-       <p> <label for="cantidad de bicicletas"> Cantidad de bicicletas* </label><br>
-        <input type="number" id="cantidad" name="cantidad bicicletas" required
-        min="1" max="6">
-      </p>
-        </select>
-      </fieldset>
-      <fieldset>
-        <legend> Confirmacion</legend>
-        <p> <label for="confirmacion"> Confirmacion*</label><br>
-          <textarea id="comentarios" name="comentarios" rows="6" cols="120" maxlength="300"></textarea>
-        </p>
-      </fieldset>
-      <p>
-        <input type="checkbox" id="politicas-acepto" name="politicas-acepto" required>
-        <label for="politicas-acepto"> He leido y acepto las <a href="#politicas">politicas de alquiler</a>*
-        </label>
-      </p>
-<button type="submit" class="boton-cta">Enviar reserva</button>
-    </form>
-  </main>
-  <section>
-    <h2>Contacto</h2>
-    <p>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
-  </section>
-  <aside>
-  <h2>Horario de atención</h2>
-    <dl>
-      <dt>Lunes a viernes</dt>
-      <dd>7:00 a. m. a 7:00 p. m.</dd>
 
-      <dt>Sábados, domingos y festivos</dt>
-      <dd>6:00 a. m. a 2:00 p. m.</dd>
-    </dl>
-  </aside>
+    <section>
+      <h2>Formulario de reserva</h2>
+      <p>Los campos marcados con * son obligatorios.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <p>
+            <label for="nombre">Nombre completo*</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
+          </p>
+
+          <p>
+            <label for="documento">Documento de identidad* (6 a 10 números)</label>
+            <input type="text" id="documento" name="documento" required
+                   inputmode="numeric" pattern="[0-9]{6,10}"
+                   title="Escribe entre 6 y 10 números, sin puntos ni comas">
+          </p>
+
+          <p>
+            <label for="correo">Correo electrónico*</label>
+            <input type="email" id="correo" name="correo" required autocomplete="email">
+          </p>
+
+          <p>
+            <label for="celular">Celular* (10 dígitos, empieza por 3)</label>
+            <input type="tel" id="celular" name="celular" required
+                   pattern="3[0-9]{9}" maxlength="10" autocomplete="tel"
+                   title="Escribe 10 dígitos que empiecen por 3">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu alquiler</legend>
+
+          <p>
+            <label for="fecha">Fecha de alquiler* (1 de noviembre al 31 de diciembre de 2026)</label>
+            <input type="date" id="fecha" name="fecha" required
+                   min="2026-11-01" max="2026-12-31">
+          </p>
+
+          <p>
+            <label for="bicicleta">Tipo de bicicleta*</label>
+            <select id="bicicleta" name="bicicleta" required>
+              <option value="">Selecciona un tipo</option>
+              <option value="urbana">Bicicleta urbana</option>
+              <option value="montana">Bicicleta de montaña</option>
+              <option value="electrica">Bicicleta eléctrica</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="plan">Plan a elegir*</label>
+            <select id="plan" name="plan" required>
+              <option value="">Selecciona un plan</option>
+              <option value="1-hora">1 hora</option>
+              <option value="4-horas">4 horas</option>
+              <option value="dia-completo">Día completo</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="cantidad">Cantidad de bicicletas* (de 1 a 6)</label>
+            <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Comentarios</legend>
+          <p>
+            <label for="comentarios">Comentarios (máximo 300 caracteres)</label>
+            <textarea id="comentarios" name="comentarios" rows="6" maxlength="300"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="politicas-acepto" name="politicas-acepto" required>
+          <label for="politicas-acepto">He leído y acepto las <a href="#politicas">políticas de alquiler</a>*</label>
+        </p>
+
+        <button type="submit" class="boton-cta">Enviar reserva</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+      <p>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
+    </section>
+
+    <aside>
+      <h2>Horario de atención</h2>
+      <dl>
+        <dt>Lunes a viernes</dt>
+        <dd>7:00 a. m. a 7:00 p. m.</dd>
+
+        <dt>Sábados, domingos y festivos</dt>
+        <dd>6:00 a. m. a 2:00 p. m.</dd>
+      </dl>
+    </aside>
+  </main>
+
   <footer>
     <p>Rueda Libre</p>
     <p><a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
     <p>&copy; 2026 Rueda Libre</p>
   </footer>
+
+  <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </body>
 </html>
