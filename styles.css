@@ -37,9 +37,12 @@ a {
   color: var(--verde-ruta);
 }
 
+
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+  border-radius: 0.5rem;
 }
 
 address {
@@ -52,15 +55,16 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+
 .encabezado,
 body > footer {
-  max-width: 60rem;
+  width: 100%;
   margin: 0 auto;
   padding: var(--espacio-s) var(--espacio-m);
 }
 
 main {
-  max-width: 60rem;
+  width: 100%;
   margin: 0 auto;
   padding: var(--espacio-m);
 }
@@ -75,11 +79,12 @@ aside {
   margin-bottom: var(--espacio-l);
 }
 
+
 .encabezado {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
   gap: var(--espacio-s);
 }
 
@@ -94,8 +99,9 @@ aside {
 #menu {
   list-style: none;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: var(--espacio-m);
+  gap: var(--espacio-s);
   margin: 0;
   padding: 0;
 }
@@ -125,6 +131,16 @@ aside {
   margin-bottom: var(--espacio-s);
 }
 
+
+.portada {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+  padding: var(--espacio-m);
+  background-color: var(--azul-noche);
+  color: var(--crema);
+}
+
 .portada h1 {
   color: var(--crema);
 }
@@ -134,19 +150,12 @@ aside {
   text-decoration: underline;
 }
 
-.portada a:focus-visible {
-  outline-color: var(--crema);
-}
-
-.portada img {
-  border-radius: 0.5rem;
-}
-
 .portada .logo {
   align-self: flex-start;
   padding: var(--espacio-xs);
   background-color: var(--crema);
 }
+
 
 .tarjeta {
   position: relative;
@@ -157,11 +166,11 @@ aside {
   border-radius: 0.75rem;
 }
 
-.tarjeta img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
+.cuadricula-rutas,
+.cuadricula-flota {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
 }
 
 .etiqueta-nuevo {
@@ -189,6 +198,7 @@ aside {
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
+  text-align: center;
 }
 
 .boton-cta:hover,
@@ -198,16 +208,12 @@ aside {
   color: var(--crema);
 }
 
-.boton-cta:active {
-  background-color: var(--naranja-pedal);
-  border-color: var(--azul-noche);
-  color: var(--azul-noche);
-}
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: var(--espacio-l);
+  font-size: 0.875rem; 
 }
 
 caption {
@@ -218,9 +224,10 @@ caption {
 }
 
 th, td {
-  padding: var(--espacio-xs) var(--espacio-s);
+  padding: 0.35rem var(--espacio-xs); 
   border: 1px solid var(--gris-asfalto);
   text-align: left;
+  word-break: break-word; 
 }
 
 thead th {
@@ -282,19 +289,21 @@ textarea:focus {
 
 form .boton-cta {
   padding: var(--espacio-s) var(--espacio-l);
+  width: 100%;
+}
+
+.fila-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-s);
 }
 
 body > footer {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
   gap: var(--espacio-l);
   margin-top: var(--espacio-xl);
   border-top: 2px solid var(--gris-asfalto);
-}
-
-body > footer section {
-  flex: 1 1 14rem;
 }
 
 body > footer h2 {
@@ -318,92 +327,100 @@ body > footer h2 {
   box-shadow: 0 2px 8px rgba(20, 33, 61, 0.4);
 }
 
-.whatsapp:hover,
-.whatsapp:focus {
-  background-color: var(--azul-noche);
-  color: var(--crema);
-}
-
-.whatsapp:focus-visible {
-  box-shadow: 0 0 0 3px var(--crema);
-}
-
-/* ========================================== */
-/* ESTILOS NUEVOS Y DE ESCRITORIO (Grid / Flex) */
-/* ========================================== */
-
-/* Cuadrícula de la Flota */
-.cuadricula-flota {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--espacio-m);
-}
-
-.cuadricula-flota .tarjeta {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin-bottom: 0;
-}
-
-.cuadricula-flota .tarjeta .precio {
-  font-family: var(--fuente-titulos);
-  font-weight: 700;
-  color: var(--verde-ruta);
-  margin: var(--espacio-xs) 0;
-}
-
-.cuadricula-flota .tarjeta .boton-cta {
-  margin-top: auto;
-  text-align: center;
-}
-
-/* 1. Portada en dos columnas con Grid (unidades fr) y centrado vertical */
-.portada {
-  min-height: 60vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: var(--espacio-l);
-  padding: var(--espacio-l);
-  background-color: var(--azul-noche);
-  color: var(--crema);
-}
-
-/* 2. Galería "Nuestras rutas" (3 tarjetas en una fila exacta) */
-.cuadricula-rutas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--espacio-m);
-}
-
-.cuadricula-rutas .tarjeta {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.cuadricula-rutas .tarjeta .boton-cta {
-  margin-top: auto;
-  text-align: center;
-}
-
-/* 3. Reservas: Formulario y contacto en proporción 2:1 */
 @media (min-width: 48rem) {
+
+  .encabezado,
+  body > footer,
+  main {
+    max-width: 60rem;
+  }
+
+  .encabezado {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  #menu {
+    justify-content: flex-end;
+    gap: var(--espacio-m);
+  }
+
+  .portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--espacio-l);
+    padding: var(--espacio-l);
+  }
+
+  .cuadricula-rutas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-m);
+  }
+
+  .cuadricula-rutas .tarjeta {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .cuadricula-rutas .tarjeta .boton-cta {
+    margin-top: auto;
+  }
   main.layout-reservas {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: var(--espacio-l);
   }
+
+  .fila-formulario {
+    flex-direction: row;
+    gap: var(--espacio-s);
+  }
+
+  .fila-formulario p {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  table {
+    font-size: 1rem;
+  }
+
+  th, td {
+    padding: var(--espacio-xs) var(--espacio-s);
+  }
+
+  body > footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  body > footer section {
+    flex: 1 1 14rem;
+  }
 }
 
-/* 4. Fila del formulario: Documento y celular juntos (Flexbox) */
-.fila-formulario {
-  display: flex;
-  gap: var(--espacio-s);
-}
+@media (min-width: 75rem) {
 
-.fila-formulario p {
-  flex: 1;
-  margin-bottom: 0;
+  .cuadricula-flota {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-m);
+  }
+
+  .cuadricula-flota .tarjeta {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .cuadricula-flota .tarjeta .boton-cta {
+    margin-top: auto;
+  }
 }
