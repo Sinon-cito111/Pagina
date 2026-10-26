@@ -1,0 +1,168 @@
+la url:http://127.0.0.1:5500/index.html
+protocolo: http
+host: 127.0.0.1.
+puerto: 5500
+ruta: /index.html
+metodo: GET
+codigo de estado: 304 Not Modified
+
+Sale el codigo 404 que significa que no encontro respuesta al hacer esa peticion
+
+el HTML sera el esqueleto de la pagina rueda libre, CSS lo "bonito" y JavaScript lo que hara que funcione
+
+┌──────────────────────────────────────┐
+│ HEADER   h1 "Rueda Libre" + bienvenida│
+├──────────────────────────────────────┤
+│ NAV      Inicio | Tarifas | Reservas  │
+├──────────────────────────────────────┤
+│ MAIN                                  │
+│  ┌─ SECTION  ¿Quiénes somos?          │
+│  ├─ SECTION  Nuestros servicios       │
+│  │   ├─ ARTICLE  Alquiler por horas   │
+│  │   ├─ ARTICLE  Alquiler por día     │
+│  │   └─ ARTICLE  Tours guiados        │
+│  ├─ SECTION  ¿Cómo alquilar?          │
+│  └─ SECTION  Encuéntranos             │
+│  ASIDE   Beneficios del servicio      │
+├──────────────────────────────────────┤
+│ FOOTER   Rueda Libre | correo | 2026  │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ HEADER   logo + h1 "Tarifas"          │
+├──────────────────────────────────────┤
+│ NAV      Inicio | Tarifas | Reservas  │
+├──────────────────────────────────────┤
+│ MAIN                                  │
+│  ┌─ SECTION  Tarifas de alquiler      │
+│  │   └─ tabla                         │
+│  ├─ SECTION#tours  Tours              │
+│  │   └─ tabla + enlace "Reservar ahora"│
+│  └─ SECTION  Información adicional    │
+│      ├─ ARTICLE  Casco y candado      │
+│      └─ ARTICLE  Horarios de salida   │
+│  ASIDE   ¿Qué llevar? (lista)         │
+├──────────────────────────────────────┤
+│ FOOTER   Rueda Libre | correo | 2026  │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ HEADER   h1 "Reserva tu bicicleta"    │
+├──────────────────────────────────────┤
+│ NAV      Inicio | Tarifas | Reservas  │
+├──────────────────────────────────────┤
+│ MAIN                                  │
+│  ┌─ SECTION  Contacto (correo)        │
+│  ├─ SECTION  Horario de atención (dl) │
+│  └─ SECTION  Formulario de reserva    │
+│  ASIDE   Aviso: reservas por correo   │
+│          mientras llega el formulario │
+├──────────────────────────────────────┤
+│ FOOTER   Rueda Libre | correo | 2026  │
+└──────────────────────────────────────┘
+
+no tengo ningun <div> o <span> en el codigo
+
+en datos personales y confirmacion deje todo en texto, tu alquiler si fue con opciones de respuesta
+
+las pruebas estuvieron bien hechas ya que las respuestas incorrectas no dejaban enviar el formulario de reserva
+
+no tuve q hacer ninguna correccion al revisar el codigo
+
+https://sinon-cito111.github.io/Pagina/index.html
+
+Texto	Fondo	Contraste	Uso
+Verde Ruta	Crema	4,93	Enlaces
+Gris Asfalto	Crema	5,57	Texto secundario
+Blanco o Crema	Verde Ruta	5,31 / 4,93	Botones
+Azul Noche	Naranja Pedal	7,20	Botones secundarios y destacados
+Crema	Azul Noche	14,83	Encabezado y pie
+
+Herencia de propiedades (comprobada en DevTools, Inspector > Calculado)
+
+Elemento revisado: <p> de bienvenida en index.html
+
+Propiedad que SÍ se hereda:
+- color: (valor que viste), viene de la regla de body.
+- Evidencia: aparece en "Heredado de body" en la pestaña Reglas.
+
+Propiedad que NO se hereda:
+- background-color: (valor que viste en el párrafo), mientras que body
+  tiene var(--crema).
+- Evidencia: en Calculado el párrafo muestra un valor distinto al de body.
+
+Verificación de estilos en línea:
+- Búsqueda "style=": (número) coincidencias
+- Búsqueda "<style": (número) coincidencias
+
+Diagnóstico: "la clase .activo no funciona"
+
+Síntoma: el enlace con class="activo" se ve gris, no verde. Sí se aplica
+el font-weight, pero el color no.
+
+Hallazgo en DevTools (Inspector > Reglas):
+- La declaración color de .activo aparece tachada.
+- La regla #menu a aparece por encima de .activo.
+- En Calculado, el color final es el gris de #menu a.
+
+Especificidad:
+- #menu a ... (1, 0, 1)
+- .activo .... (0, 1, 0)
+
+Causa: ambos selectores apuntan al mismo enlace y declaran color. Gana
+#menu a porque su especificidad es mayor (un id pesa más que una clase).
+La clase sí se aplica, pero pierde el conflicto en la propiedad color.
+
+Comprobación: al desmarcar color en #menu a, el enlace se vuelve verde.
+
+Solución: aumentar la especificidad de la regla de la clase con
+#menu a.activo (1, 1, 1), que supera a #menu a. No se usa !important.
+
+CIERRE DE BITÁCORA · Proyecto Rueda Libre · v1.0
+
+QUÉ CONSTRUÍ
+- Estructura HTML: doctype, lang="es", charset, viewport, descripción
+  y título. Con DevTools (Network) registré URL, protocolo, host,
+  puerto, ruta, método y código de estado (200/304) del documento, y
+  provoqué un 404 con una ruta inexistente.
+- Git y GitHub: primer commit y push, resolución de un rechazo por
+  historial distinto, clonado en otro computador y resolución de un
+  conflicto de merge.
+- Contenido: jerarquía de títulos (h1 a h3), secciones, strong/em,
+  listas, imágenes con alt y ancho, y tres tipos de enlace (absoluto
+  en otra pestaña, mailto e interno).
+- Sitio de tres páginas: tablas con caption, thead, tbody y scope;
+  rutas relativas (../); enlace a una sección de otra página
+  (tarifas.html#tours); menú, pie de página y versión v0.1.
+- HTML semántico: header, nav, main, section, article, aside y footer.
+- Formularios: required, tipos de campo, pattern, minlength, min/max,
+  listas desplegables, fieldset y casilla obligatoria de políticas.
+- Accesibilidad y publicación: auditoría, análisis de contraste WCAG de
+  la paleta del cliente y publicación en GitHub Pages.
+- CSS: Google Fonts, variables globales, herencia, especificidad
+  (#menu a contra .activo), estados hover/focus/active, botón de
+  llamada a la acción, foco visible, box-sizing, tarjetas, tablas,
+  formulario y menú con flexbox.
+- Pulido final: etiqueta "Nuevo" (position: absolute), botón fijo de
+  WhatsApp (position: fixed) con espacio inferior para no tapar el
+  contenido, revisión de consistencia entre páginas y limpieza del CSS.
+
+JUSTIFICACIÓN DE ELEMENTOS NO SEMÁNTICOS
+- Se conserva un <span class="etiqueta-nuevo"> en la tarjeta de
+  bicicletas eléctricas: es una insignia visual y ninguna etiqueta
+  semántica la describe. No se usó <div>.
+
+REVISIÓN FINAL
+- Network: sin errores 404 en las tres páginas.
+- Declaraciones tachadas: solo el color de "#menu a" en el enlace
+  activo, que es esperado.
+- Recorrido con teclado: el foco se ve en todos los elementos.
+- Publicación: v1.0 en GitHub Pages (pega aquí la URL).
+
+QUÉ MEJORARÍA
+- Diseño adaptable con media queries y un menú pensado para celular.
+- Conectar el formulario a un servicio que reciba las reservas, con
+  mensajes de error propios y accesibles.
+- Optimizar las imágenes (formato y tamaño) para que cargue más rápido.
+- Probar el sitio con un lector de pantalla y validarlo con W3C.
+- Poner el número real de WhatsApp y la dirección y horarios reales.
