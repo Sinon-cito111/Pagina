@@ -1,3 +1,15 @@
+/* =========================================================
+   Rueda Libre · styles.css · v2 (convive con Bootstrap 5.3)
+   Esta hoja se carga DESPUÉS de bootstrap.min.css.
+
+   Etiquetas de uso:
+   [TODAS]             las usan las tres páginas
+   [TARIFAS+RESERVAS]  tarifas.html y reservas.html aún no usan
+                       Bootstrap: NO borrar hasta migrarlas
+   [INICIO]            solo la usa index.html
+   ========================================================= */
+
+/* ===== Variables de la marca [TODAS] ===== */
 :root {
   --verde-ruta: #1E7A4F;
   --naranja-pedal: #F39A2B;
@@ -16,10 +28,22 @@
   --espacio-xl: 4rem;
 }
 
+/* ===== Tema: la paleta de la marca para las utilidades de Bootstrap [INICIO] ===== */
+:root {
+  --bs-success-rgb: 30, 122, 79;
+  --bs-warning-rgb: 243, 154, 43;
+  --bs-dark-rgb: 20, 33, 61;
+  --bs-light-rgb: 250, 246, 239;
+  --bs-secondary-color: #5B6470;
+  --bs-border-color: #5B6470;
+}
+
+/* ===== Modelo de caja [TODAS] ===== */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
+/* ===== Base [TODAS] ===== */
 body {
   margin: 0;
   padding-bottom: 5rem;
@@ -48,12 +72,19 @@ address {
   font-style: normal;
 }
 
+/* ===== Foco visible [TODAS] ===== */
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--azul-noche);
   outline-offset: 3px;
 }
 
+/* Foco visible sobre fondos oscuros de Bootstrap (bg-dark) [INICIO] */
+.bg-dark a:focus-visible {
+  outline-color: var(--crema);
+}
+
+/* ===== Estructura: ancho del sitio [TODAS] ===== */
 .encabezado,
 body > footer {
   width: 100%;
@@ -72,12 +103,14 @@ main section {
   margin-bottom: var(--espacio-l);
 }
 
+/* [TARIFAS+RESERVAS] */
 aside {
   padding-left: var(--espacio-m);
   border-left: 4px solid var(--verde-ruta);
   margin-bottom: var(--espacio-l);
 }
 
+/* ===== Encabezado y menú [TODAS] ===== */
 .encabezado {
   display: flex;
   flex-direction: column;
@@ -124,49 +157,21 @@ aside {
   border-bottom-color: var(--verde-ruta);
 }
 
+/* ===== Logo [TODAS] ===== */
 .logo {
   display: block;
   margin-bottom: var(--espacio-s);
 }
 
-.portada {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-m);
-  padding: var(--espacio-m);
-  background-color: var(--azul-noche);
-  color: var(--crema);
-}
-
-.portada h1 {
-  color: var(--crema);
-}
-
-.portada a {
-  color: var(--crema);
-  text-decoration: underline;
-}
-
-.portada .logo {
-  align-self: flex-start;
-  padding: var(--espacio-xs);
-  background-color: var(--crema);
-}
-
+/* ===== Tarjetas y etiqueta "Nuevo" [INICIO] ===== */
+/* El espacio entre tarjetas lo da el gutter de la grilla (g-4):
+   la tarjeta ya no lleva margin-bottom. */
 .tarjeta {
   position: relative;
   padding: var(--espacio-m);
-  margin-bottom: var(--espacio-m);
   background-color: var(--blanco);
   border: 2px solid var(--gris-asfalto);
   border-radius: 0.75rem;
-}
-
-.cuadricula-rutas,
-.cuadricula-flota {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-m);
 }
 
 .etiqueta-nuevo {
@@ -182,6 +187,7 @@ aside {
   font-weight: 700;
 }
 
+/* ===== Botón de llamada a la acción [TODAS] ===== */
 .boton-cta {
   display: inline-block;
   padding: var(--espacio-xs) var(--espacio-m);
@@ -204,11 +210,12 @@ aside {
   color: var(--crema);
 }
 
+/* ===== Tablas [TARIFAS+RESERVAS] ===== */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: var(--espacio-l);
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
 }
 
 caption {
@@ -219,10 +226,10 @@ caption {
 }
 
 th, td {
-  padding: 0.35rem var(--espacio-xs); 
+  padding: 0.35rem var(--espacio-xs);
   border: 1px solid var(--gris-asfalto);
   text-align: left;
-  word-break: break-word; 
+  word-break: break-word;
 }
 
 thead th {
@@ -230,6 +237,7 @@ thead th {
   color: var(--crema);
 }
 
+/* ===== Formulario [TARIFAS+RESERVAS] ===== */
 fieldset {
   margin: 0 0 var(--espacio-m);
   padding: var(--espacio-m);
@@ -293,6 +301,7 @@ form .boton-cta {
   gap: var(--espacio-s);
 }
 
+/* ===== Pie de página [TODAS] ===== */
 body > footer {
   display: flex;
   flex-direction: column;
@@ -306,6 +315,7 @@ body > footer h2 {
   font-size: 1.125rem;
 }
 
+/* ===== WhatsApp flotante [TODAS] ===== */
 .whatsapp {
   position: fixed;
   right: var(--espacio-s);
@@ -322,8 +332,10 @@ body > footer h2 {
   box-shadow: 0 2px 8px rgba(20, 33, 61, 0.4);
 }
 
+/* ===== Pantallas medianas y grandes ===== */
 @media (min-width: 48rem) {
 
+  /* [TODAS] */
   .encabezado,
   body > footer,
   main {
@@ -341,33 +353,17 @@ body > footer h2 {
     gap: var(--espacio-m);
   }
 
-  .portada {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: var(--espacio-l);
-    padding: var(--espacio-l);
+  body > footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
-  .cuadricula-rutas {
-    width: 100%;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--espacio-m);
+  body > footer section {
+    flex: 1 1 14rem;
   }
 
-  .cuadricula-rutas .tarjeta {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin-bottom: 0;
-  }
-
-  .cuadricula-rutas .tarjeta .boton-cta {
-    margin-top: auto;
-  }
-
+  /* [TARIFAS+RESERVAS] */
   main.layout-reservas {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -392,40 +388,24 @@ body > footer h2 {
     padding: var(--espacio-xs) var(--espacio-s);
   }
 
-  body > footer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  body > footer section {
-    flex: 1 1 14rem;
-  }
-
-
   form .boton-cta {
     width: auto;
   }
 }
-
-@media (min-width: 75rem) {
-
-  .cuadricula-flota {
-    width: 100%;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--espacio-m);
-  }
-
-  .cuadricula-flota .tarjeta {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin-bottom: 0;
-  }
-
-  .cuadricula-flota .tarjeta .boton-cta {
-    margin-top: auto;
-  }
+caption {
+  caption-side: top;
+  padding: var(--espacio-xs) 0;
+  color: var(--azul-noche);
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  text-align: left;
+}
+legend {
+  float: none;
+  width: auto;
+  margin-bottom: 0;
+  padding: 0 var(--espacio-xs);
+  font-family: var(--fuente-titulos);
+  font-size: 1rem;
+  font-weight: 700;
 }

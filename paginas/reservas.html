@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 <header class="encabezado">
@@ -27,11 +28,13 @@
     <h1>Reserva tu bicicleta</h1>
   </header>
 
-  <!-- LAYOUT PRINCIPAL EN PROPORCIÓN 2:1 -->
-  <main class="layout-reservas">
+ <main>
+  <img class="logo" src="../img/logo.png" alt="Logo de Rueda Libre" width="150">
+  <h1>Reserva tu bicicleta</h1>
 
-    <!-- COLUMNA IZQUIERDA (Ocupa 2 partes): Políticas y Formulario -->
-    <div class="columna-principal">
+  <div class="row g-4">
+
+    <div class="col-md-8">
       <section id="politicas">
         <h2>Políticas de alquiler</h2>
         <ol>
@@ -49,77 +52,77 @@
         <form action="#" method="post">
           <fieldset>
             <legend>Datos personales</legend>
+            <div class="row g-3">
 
-            <p>
-              <label for="nombre">Nombre completo*</label>
-              <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
-            </p>
+              <div class="col-12">
+                <label for="nombre">Nombre completo*</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
+              </div>
 
-            <!-- FILA DE FORMULARIO (Documento y celular juntos con Flexbox) -->
-            <div class="fila-formulario">
-              <p>
+              <div class="col-sm-6 col-md-12 col-lg-6">
                 <label for="documento">Documento de identidad* (6 a 10 números)</label>
                 <input type="text" id="documento" name="documento" required
                        inputmode="numeric" pattern="[0-9]{6,10}"
                        title="Escribe entre 6 y 10 números, sin puntos ni comas">
-              </p>
+              </div>
 
-              <p>
+              <div class="col-sm-6 col-md-12 col-lg-6">
                 <label for="celular">Celular* (10 dígitos, empieza por 3)</label>
                 <input type="tel" id="celular" name="celular" required
                        pattern="3[0-9]{9}" maxlength="10" autocomplete="tel"
                        title="Escribe 10 dígitos que empiecen por 3">
-              </p>
-            </div>
-            <!-- FIN DE LA FILA -->
+              </div>
 
-            <p>
-              <label for="correo">Correo electrónico*</label>
-              <input type="email" id="correo" name="correo" required autocomplete="email">
-            </p>
+              <div class="col-12">
+                <label for="correo">Correo electrónico*</label>
+                <input type="email" id="correo" name="correo" required autocomplete="email">
+              </div>
+
+            </div>
           </fieldset>
 
           <fieldset>
             <legend>Tu alquiler</legend>
+            <div class="row g-3">
 
-            <p>
-              <label for="fecha">Fecha de alquiler* (1 de noviembre al 31 de diciembre de 2026)</label>
-              <input type="date" id="fecha" name="fecha" required
-                     min="2026-11-01" max="2026-12-31">
-            </p>
+              <div class="col-sm-6 col-md-12 col-lg-6">
+                <label for="fecha">Fecha de alquiler* (1 de noviembre al 31 de diciembre de 2026)</label>
+                <input type="date" id="fecha" name="fecha" required
+                       min="2026-11-01" max="2026-12-31">
+              </div>
 
-            <p>
-              <label for="bicicleta">Tipo de bicicleta*</label>
-              <select id="bicicleta" name="bicicleta" required>
-                <option value="">Selecciona un tipo</option>
-                <option value="urbana">Bicicleta urbana</option>
-                <option value="montana">Bicicleta de montaña</option>
-                <option value="electrica">Bicicleta eléctrica</option>
-              </select>
-            </p>
+              <div class="col-sm-6 col-md-12 col-lg-6">
+                <label for="bicicleta">Tipo de bicicleta*</label>
+                <select id="bicicleta" name="bicicleta" required>
+                  <option value="">Selecciona un tipo</option>
+                  <option value="urbana">Bicicleta urbana</option>
+                  <option value="montana">Bicicleta de montaña</option>
+                  <option value="electrica">Bicicleta eléctrica</option>
+                </select>
+              </div>
 
-            <p>
-              <label for="plan">Plan a elegir*</label>
-              <select id="plan" name="plan" required>
-                <option value="">Selecciona un plan</option>
-                <option value="1-hora">1 hora</option>
-                <option value="4-horas">4 horas</option>
-                <option value="dia-completo">Día completo</option>
-              </select>
-            </p>
+              <div class="col-sm-6 col-md-12 col-lg-6">
+                <label for="plan">Plan a elegir*</label>
+                <select id="plan" name="plan" required>
+                  <option value="">Selecciona un plan</option>
+                  <option value="1-hora">1 hora</option>
+                  <option value="4-horas">4 horas</option>
+                  <option value="dia-completo">Día completo</option>
+                </select>
+              </div>
 
-            <p>
-              <label for="cantidad">Cantidad de bicicletas* (de 1 a 6)</label>
-              <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
-            </p>
+              <div class="col-sm-6 col-md-12 col-lg-6">
+                <label for="cantidad">Cantidad de bicicletas* (de 1 a 6)</label>
+                <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
+              </div>
+
+            </div>
           </fieldset>
 
           <fieldset>
             <legend>Comentarios</legend>
-            <p>
-              <label for="comentarios">Comentarios (máximo 300 caracteres)</label>
-              <textarea id="comentarios" name="comentarios" rows="6" maxlength="300"></textarea>
-            </p>
+            <label for="comentarios">Comentarios (máximo 300 caracteres)</label>
+            <textarea id="comentarios" name="comentarios" rows="6" maxlength="300"></textarea>
           </fieldset>
 
           <p>
@@ -132,14 +135,13 @@
       </section>
     </div>
 
-    <!-- COLUMNA DERECHA (Ocupa 1 parte): Contacto y Horarios -->
-    <aside class="columna-lateral">
+    <div class="col-md-4">
       <section>
         <h2>Contacto</h2>
         <p>Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
       </section>
 
-      <section>
+      <aside>
         <h2>Horario de atención</h2>
         <dl>
           <dt>Lunes a viernes</dt>
@@ -148,10 +150,11 @@
           <dt>Sábados, domingos y festivos</dt>
           <dd>6:00 a. m. a 2:00 p. m.</dd>
         </dl>
-      </section>
-    </aside>
+      </aside>
+    </div>
 
-  </main>
+  </div>
+</main>
 
 <footer>
   <section>
@@ -175,5 +178,6 @@
 </footer>
 
   <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
