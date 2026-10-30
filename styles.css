@@ -1,411 +1,277 @@
-/* =========================================================
-   Rueda Libre · styles.css · v2 (convive con Bootstrap 5.3)
-   Esta hoja se carga DESPUÉS de bootstrap.min.css.
-
-   Etiquetas de uso:
-   [TODAS]             las usan las tres páginas
-   [TARIFAS+RESERVAS]  tarifas.html y reservas.html aún no usan
-                       Bootstrap: NO borrar hasta migrarlas
-   [INICIO]            solo la usa index.html
-   ========================================================= */
-
-/* ===== Variables de la marca [TODAS] ===== */
 :root {
-  --verde-ruta: #1E7A4F;
-  --naranja-pedal: #F39A2B;
+  --bs-primary: #1E7A4F;
+  --bs-primary-rgb: 30, 122, 79;
+  --bs-body-font-family: "Open Sans", sans-serif;
+  --bs-body-color: #14213D;
+  --bs-link-color: #176341;
+  --bs-link-hover-color: #10472E;
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-lg: 1rem;
+  --ruta-verde: #1E7A4F;
+  --pedal-naranja: #F39A2B;
   --azul-noche: #14213D;
   --crema: #FAF6EF;
   --gris-asfalto: #5B6470;
-  --blanco: #FFFFFF;
-
-  --fuente-titulos: "Montserrat", Arial, sans-serif;
-  --fuente-texto: "Open Sans", Arial, sans-serif;
-
-  --espacio-xs: 0.5rem;
-  --espacio-s: 1rem;
-  --espacio-m: 1.5rem;
-  --espacio-l: 2.5rem;
-  --espacio-xl: 4rem;
 }
 
-/* ===== Tema: la paleta de la marca para las utilidades de Bootstrap [INICIO] ===== */
-:root {
-  --bs-success-rgb: 30, 122, 79;
-  --bs-warning-rgb: 243, 154, 43;
-  --bs-dark-rgb: 20, 33, 61;
-  --bs-light-rgb: 250, 246, 239;
-  --bs-secondary-color: #5B6470;
-  --bs-border-color: #5B6470;
-}
-
-/* ===== Modelo de caja [TODAS] ===== */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* ===== Base [TODAS] ===== */
 body {
-  margin: 0;
-  padding-bottom: 5rem;
-  font-family: var(--fuente-texto);
-  color: var(--azul-noche);
-  background-color: var(--crema);
-  line-height: 1.6;
+  font-family: var(--bs-body-font-family);
+  color: var(--bs-body-color);
+  line-height: 1.65;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--fuente-titulos);
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 a {
-  color: var(--verde-ruta);
+  text-underline-offset: 0.18em;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0.5rem;
-}
-
-address {
-  font-style: normal;
-}
-
-/* ===== Foco visible [TODAS] ===== */
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--azul-noche);
+:focus-visible {
+  outline: 3px solid var(--pedal-naranja);
   outline-offset: 3px;
 }
 
-/* Foco visible sobre fondos oscuros de Bootstrap (bg-dark) [INICIO] */
-.bg-dark a:focus-visible {
-  outline-color: var(--crema);
-}
-
-/* ===== Estructura: ancho del sitio [TODAS] ===== */
-.encabezado,
-body > footer {
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--espacio-s) var(--espacio-m);
-}
-
-main {
-  width: 100%;
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: var(--espacio-m);
-}
-
-main section {
-  margin-bottom: var(--espacio-l);
-}
-
-/* [TARIFAS+RESERVAS] */
-aside {
-  padding-left: var(--espacio-m);
-  border-left: 4px solid var(--verde-ruta);
-  margin-bottom: var(--espacio-l);
-}
-
-/* ===== Encabezado y menú [TODAS] ===== */
-.encabezado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--espacio-s);
-}
-
-.marca {
-  font-family: var(--fuente-titulos);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--azul-noche);
-  text-decoration: none;
-}
-
-#menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--espacio-s);
-  margin: 0;
-  padding: 0;
-}
-
-#menu a {
-  padding: var(--espacio-xs) 0;
-  color: var(--gris-asfalto);
-  text-decoration: none;
-  border-bottom: 3px solid transparent;
-}
-
-#menu a:hover,
-#menu a:focus {
-  color: var(--azul-noche);
-  border-bottom-color: var(--azul-noche);
-  text-decoration: underline;
-}
-
-#menu a.activo {
-  color: var(--verde-ruta);
-  font-weight: 600;
-  border-bottom-color: var(--verde-ruta);
-}
-
-/* ===== Logo [TODAS] ===== */
-.logo {
-  display: block;
-  margin-bottom: var(--espacio-s);
-}
-
-/* ===== Tarjetas y etiqueta "Nuevo" [INICIO] ===== */
-/* El espacio entre tarjetas lo da el gutter de la grilla (g-4):
-   la tarjeta ya no lleva margin-bottom. */
-.tarjeta {
-  position: relative;
-  padding: var(--espacio-m);
-  background-color: var(--blanco);
-  border: 2px solid var(--gris-asfalto);
-  border-radius: 0.75rem;
-}
-
-.etiqueta-nuevo {
+.skip-link {
   position: absolute;
-  top: -0.75rem;
-  right: var(--espacio-m);
-  padding: 0.25rem var(--espacio-xs);
-  background-color: var(--naranja-pedal);
-  color: var(--azul-noche);
+  z-index: 2000;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.6rem 1rem;
+  color: white;
+  background: var(--azul-noche);
   border-radius: 0.5rem;
-  font-family: var(--fuente-titulos);
-  font-size: 0.875rem;
+}
+
+.bg-noche { background-color: var(--azul-noche); }
+.bg-crema { background-color: var(--crema); }
+.text-verde { color: var(--ruta-verde); }
+
+.navbar .nav-link {
+  color: rgba(255,255,255,0.86);
+  padding-inline: 0.8rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+  color: #fff;
+}
+
+.brand-logo {
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  padding: 0.15rem;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--ruta-verde);
+  --bs-btn-border-color: var(--ruta-verde);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #176341;
+  --bs-btn-hover-border-color: #176341;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #10472E;
+  --bs-btn-active-border-color: #10472E;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--ruta-verde);
+  --bs-btn-disabled-border-color: var(--ruta-verde);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--ruta-verde);
+  --bs-btn-border-color: var(--ruta-verde);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ruta-verde);
+  --bs-btn-hover-border-color: var(--ruta-verde);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #10472E;
+  --bs-btn-active-border-color: #10472E;
+}
+
+.btn-naranja {
+  color: #14213D;
+  background-color: var(--pedal-naranja);
+  border: 1px solid var(--pedal-naranja);
   font-weight: 700;
 }
 
-/* ===== Botón de llamada a la acción [TODAS] ===== */
-.boton-cta {
+.btn-naranja:hover,
+.btn-naranja:focus {
+  color: #14213D;
+  background-color: #e58a18;
+  border-color: #e58a18;
+}
+
+.btn-naranja:active {
+  color: #14213D;
+  background-color: #cf7410;
+  border-color: #cf7410;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #FAF6EF 0%, #ffffff 72%);
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+}
+
+.eyebrow {
   display: inline-block;
-  padding: var(--espacio-xs) var(--espacio-m);
-  background-color: var(--verde-ruta);
-  color: var(--blanco);
-  border: 2px solid var(--verde-ruta);
-  border-radius: 0.5rem;
-  font-family: var(--fuente-titulos);
-  font-size: 1rem;
+  color: var(--ruta-verde);
+  font-size: 0.82rem;
   font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 760px;
+}
+
+.section-heading h2 {
+  margin-top: 0.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.promo-image {
+  height: clamp(280px, 42vw, 500px);
+  object-fit: cover;
+  filter: brightness(0.68);
+}
+
+.carousel-caption {
+  right: 12%;
+  bottom: 12%;
+  left: 12%;
+  max-width: 650px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.carousel-caption h3 {
+  font-size: clamp(1.7rem, 4vw, 3rem);
+}
+
+.card {
+  border: 1px solid rgba(20,33,61,0.1);
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.feature-icon,
+.benefit-card > i {
+  display: inline-block;
+  color: var(--ruta-verde);
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.benefit-card {
+  padding: 1.5rem;
   text-align: center;
+  background: #fff;
+  border: 1px solid rgba(20,33,61,0.12);
+  border-radius: var(--bs-border-radius);
+  box-shadow: 0 0.25rem 0.8rem rgba(20,33,61,0.06);
 }
 
-.boton-cta:hover,
-.boton-cta:focus {
-  background-color: var(--azul-noche);
-  border-color: var(--azul-noche);
-  color: var(--crema);
+.benefit-card p {
+  margin-bottom: 0;
+  color: var(--gris-asfalto);
 }
 
-/* ===== Tablas [TARIFAS+RESERVAS] ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: var(--espacio-l);
-  font-size: 0.875rem;
+.cta-panel {
+  color: #fff;
+  background: var(--azul-noche);
 }
 
-caption {
-  padding: var(--espacio-xs) 0;
-  font-family: var(--fuente-titulos);
-  font-weight: 700;
-  text-align: left;
+.page-hero {
+  background: var(--crema);
 }
 
-th, td {
-  padding: 0.35rem var(--espacio-xs);
-  border: 1px solid var(--gris-asfalto);
-  text-align: left;
-  word-break: break-word;
+.site-footer {
+  color: #fff;
+  background: var(--azul-noche);
 }
 
-thead th {
-  background-color: var(--azul-noche);
-  color: var(--crema);
+.site-footer a {
+  color: #fff;
 }
 
-/* ===== Formulario [TARIFAS+RESERVAS] ===== */
-fieldset {
-  margin: 0 0 var(--espacio-m);
-  padding: var(--espacio-m);
-  border: 2px solid var(--gris-asfalto);
-  border-radius: 0.5rem;
-}
-
-legend {
-  padding: 0 var(--espacio-xs);
-  font-family: var(--fuente-titulos);
-  font-weight: 700;
-}
-
-form p {
-  margin: 0 0 var(--espacio-m);
-}
-
-label {
-  display: block;
-  margin-bottom: var(--espacio-xs);
-  font-weight: 600;
-}
-
-input[type="checkbox"] + label {
-  display: inline;
-  font-weight: 400;
-}
-
-input:not([type="checkbox"]),
-select,
-textarea {
-  width: 100%;
-  font: inherit;
-  color: var(--azul-noche);
-  background-color: var(--blanco);
-  border: 2px solid var(--gris-asfalto);
-  border-radius: 0.25rem;
-  padding: var(--espacio-xs);
-}
-
-textarea {
-  resize: vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 3px solid var(--azul-noche);
-  outline-offset: 2px;
-  border-color: var(--azul-noche);
-}
-
-form .boton-cta {
-  padding: var(--espacio-s) var(--espacio-l);
-  width: 100%;
-}
-
-.fila-formulario {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-s);
-}
-
-/* ===== Pie de página [TODAS] ===== */
-body > footer {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-l);
-  margin-top: var(--espacio-xl);
-  border-top: 2px solid var(--gris-asfalto);
-}
-
-body > footer h2 {
-  margin-top: 0;
-  font-size: 1.125rem;
-}
-
-/* ===== WhatsApp flotante [TODAS] ===== */
-.whatsapp {
+.whatsapp-button {
   position: fixed;
-  right: var(--espacio-s);
-  bottom: var(--espacio-s);
-  z-index: 10;
-  padding: var(--espacio-xs) var(--espacio-m);
-  background-color: var(--verde-ruta);
-  color: var(--blanco);
-  border: 2px solid var(--crema);
-  border-radius: 0.5rem;
-  font-family: var(--fuente-titulos);
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1030;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1.1rem;
+  color: #fff;
+  background: #16834b;
+  border: 2px solid #fff;
+  border-radius: 50rem;
+  box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.22);
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(20, 33, 61, 0.4);
 }
 
-/* ===== Pantallas medianas y grandes ===== */
-@media (min-width: 48rem) {
-
-  /* [TODAS] */
-  .encabezado,
-  body > footer,
-  main {
-    max-width: 60rem;
-  }
-
-  .encabezado {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  #menu {
-    justify-content: flex-end;
-    gap: var(--espacio-m);
-  }
-
-  body > footer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  body > footer section {
-    flex: 1 1 14rem;
-  }
-
-  /* [TARIFAS+RESERVAS] */
-  main.layout-reservas {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--espacio-l);
-  }
-
-  .fila-formulario {
-    flex-direction: row;
-    gap: var(--espacio-s);
-  }
-
-  .fila-formulario p {
-    flex: 1;
-    margin-bottom: 0;
-  }
-
-  table {
-    font-size: 1rem;
-  }
-
-  th, td {
-    padding: var(--espacio-xs) var(--espacio-s);
-  }
-
-  form .boton-cta {
-    width: auto;
-  }
+.whatsapp-button:hover,
+.whatsapp-button:focus {
+  color: #fff;
+  background: #10683b;
 }
-caption {
-  caption-side: top;
-  padding: var(--espacio-xs) 0;
-  color: var(--azul-noche);
-  font-family: var(--fuente-titulos);
-  font-weight: 700;
-  text-align: left;
+
+.whatsapp-button i {
+  font-size: 1.3rem;
 }
-legend {
-  float: none;
-  width: auto;
-  margin-bottom: 0;
-  padding: 0 var(--espacio-xs);
-  font-family: var(--fuente-titulos);
-  font-size: 1rem;
-  font-weight: 700;
+
+.table thead th {
+  white-space: nowrap;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--ruta-verde);
+  box-shadow: 0 0 0 0.25rem rgba(30,122,79,0.2);
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding-top: 2rem;
+  }
+
+  .carousel-caption {
+    right: 10%;
+    bottom: 8%;
+    left: 10%;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .whatsapp-button {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.7rem 0.9rem;
+  }
 }

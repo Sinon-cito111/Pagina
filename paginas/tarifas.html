@@ -2,149 +2,89 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tarifas de alquiler de bicicletas y precios de los tours guiados de Rueda Libre en Medellín.">
-  <title>Tarifas de Rueda Libre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta las tarifas por hora de las bicicletas y conoce los recorridos de Rueda Libre.">
+  <title>Tarifas y rutas | Rueda Libre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
- <header class="encabezado">
-  <a class="marca" href="../index.html">Rueda Libre</a>
-  <nav aria-label="Menú principal">
-    <ul id="menu">
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="tarifas.html" class="activo" aria-current="page">Tarifas y rutas</a></li>
-      <li><a href="reservas.html">Reservas</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <header>
-    <img class="logo" src="../img/logo.png" alt="Logo de Rueda Libre" width="150">
-    <h1>Tarifas</h1>
-  </header>
-
-  <main>
-    <section>
-      <h2>Tarifas de alquiler</h2>
-      <table>
-        <caption>Tarifas de alquiler de bicicletas</caption>
-        <thead>
-          <tr>
-            <th scope="col">Tipo de bicicleta</th>
-            <th scope="col">1 hora</th>
-            <th scope="col">4 horas</th>
-            <th scope="col">Día completo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Bicicleta urbana</th>
-            <td>$10.000</td>
-            <td>$30.000</td>
-            <td>$50.000</td>
-          </tr>
-          <tr>
-            <th scope="row">Bicicleta de montaña</th>
-            <td>$15.000</td>
-            <td>$45.000</td>
-            <td>$70.000</td>
-          </tr>
-          <tr>
-            <th scope="row">Bicicleta eléctrica</th>
-            <td>$25.000</td>
-            <td>$70.000</td>
-            <td>$110.000</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="tours">
-      <h2>Tours</h2>
-      <table>
-        <caption>Precios de los tours</caption>
-        <thead>
-          <tr>
-            <th scope="col">Recorrido</th>
-            <th scope="col">Distancia</th>
-            <th scope="col">Duración</th>
-            <th scope="col">Nivel</th>
-            <th scope="col">Precio por persona</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Ríos y parques</th>
-            <td>12 km</td>
-            <td>2 horas</td>
-            <td>Fácil</td>
-            <td>$50.000</td>
-          </tr>
-          <tr>
-            <th scope="row">Sabores de barrio</th>
-            <td>18 km</td>
-            <td>3 horas</td>
-            <td>Medio</td>
-            <td>$60.000</td>
-          </tr>
-          <tr>
-            <th scope="row">Reto Las Palmas</th>
-            <td>25 km</td>
-            <td>4 horas</td>
-            <td>Difícil</td>
-            <td>$85.000</td>
-          </tr>
-        </tbody>
-      </table>
-      <p><a href="reservas.html" class="boton-cta">Reservar ahora</a></p>
-    </section>
-
-    <section>
-      <h2>Información adicional</h2>
-
-      <h3>Casco y candado</h3>
-      <p><strong>Todas las tarifas incluyen el uso de casco y candado.</strong></p>
-
-      <h3>Horarios de salida de los recorridos</h3>
-      <p>Los recorridos salen los sábados y domingos a las 7:00 a. m.</p>
-    </section>
-
-    <aside>
-      <h2>¿Qué llevar?</h2>
-      <ul>
-        <li>Ropa cómoda</li>
-        <li>Agua</li>
-        <li>Protector solar</li>
-        <li>Documento de identidad</li>
+  <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-noche sticky-top" aria-label="Menú principal">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../img/logo.png" alt="" width="42" height="42" class="brand-logo"><span>Rueda Libre</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1" aria-hidden="true"></i>Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="tarifas.html" aria-current="page"><i class="bi bi-currency-dollar me-1" aria-hidden="true"></i>Tarifas y rutas</a></li>
+        <li class="nav-item"><a class="nav-link " href="reservas.html" ><i class="bi bi-calendar-check me-1" aria-hidden="true"></i>Reservas</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-naranja btn-sm" href="reservas.html">Reservar <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
       </ul>
-    </aside>
+    </div>
+  </div>
+</nav>
+
+  <main id="contenido">
+    <section class="page-hero py-5">
+      <div class="container">
+        <span class="eyebrow">Planea tu recorrido</span>
+        <h1 class="display-5 fw-bold">Tarifas y rutas</h1>
+        <p class="lead mb-0">Encuentra una bicicleta para tu plan y descubre Medellín a tu ritmo.</p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="section-heading mb-4"><h2>Tarifas de alquiler</h2><p>Precios por hora según el tipo de bicicleta.</p></div>
+        <div class="table-responsive shadow-sm rounded-3">
+          <table class="table table-striped table-hover align-middle mb-0">
+            <caption class="caption-top px-3">Tarifas de alquiler por hora en pesos colombianos.</caption>
+            <thead class="table-dark"><tr><th scope="col">Bicicleta</th><th scope="col">Descripción</th><th scope="col">Precio por hora</th><th scope="col">Reserva</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Urbana Clásica</th><td>Cómoda y liviana para las ciclorrutas.</td><td>$10.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+              <tr><th scope="row">Urbana Plegable</th><td>Ideal para combinar con el metro.</td><td>$12.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+              <tr><th scope="row">Montaña Trail</th><td>Suspensión delantera y 21 cambios.</td><td>$15.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+              <tr><th scope="row">Gravel Aventura</th><td>Para rutas mixtas de asfalto y destapado.</td><td>$18.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+              <tr><th scope="row">Eléctrica Urbana</th><td>Asistencia eléctrica con 45 km de autonomía.</td><td>$25.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+              <tr><th scope="row">Infantil</th><td>Para niños de 6 a 10 años.</td><td>$8.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+              <tr><th scope="row">Tándem</th><td>Para dos personas.</td><td>$20.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="form-text mt-2">Las tarifas por día, descuentos y disponibilidad deben confirmarse directamente con Rueda Libre.</p>
+      </div>
+    </section>
+
+    <section id="tours" class="py-5 bg-crema">
+      <div class="container">
+        <div class="section-heading mb-4"><h2>Rutas y recorridos</h2><p>Elige el nivel que mejor se adapte a tu experiencia.</p></div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col"><article class="card h-100 shadow-sm"><img src="../img/rio-parques.jpg" class="card-img-top card-image" alt="Recorrido Río y Parques"><div class="card-body d-flex flex-column"><span class="badge text-bg-success align-self-start mb-2">Fácil</span><h3 class="h5">Río y Parques</h3><p>Un recorrido tranquilo para disfrutar los espacios verdes de la ciudad.</p><a href="reservas.html" class="btn btn-outline-primary mt-auto">Consultar disponibilidad</a></div></article></div>
+          <div class="col"><article class="card h-100 shadow-sm"><img src="../img/sabores-barrio.jpg" class="card-img-top card-image" alt="Recorrido Sabores de Barrio"><div class="card-body d-flex flex-column"><span class="badge text-bg-warning align-self-start mb-2">Medio</span><h3 class="h5">Sabores de Barrio</h3><p>Conoce la ciudad y su cultura a través de un recorrido de nivel medio.</p><a href="reservas.html" class="btn btn-outline-primary mt-auto">Consultar disponibilidad</a></div></article></div>
+          <div class="col"><article class="card h-100 shadow-sm"><img src="../img/reto-palmas.jpg" class="card-img-top card-image" alt="Recorrido Reto Las Palmas"><div class="card-body d-flex flex-column"><span class="badge text-bg-danger align-self-start mb-2">Difícil</span><h3 class="h5">Reto Las Palmas</h3><p>Una ruta exigente para quienes buscan un desafío sobre la bicicleta.</p><a href="reservas.html" class="btn btn-outline-primary mt-auto">Consultar disponibilidad</a></div></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-panel rounded-4 p-4 p-md-5 d-md-flex align-items-center justify-content-between gap-3">
+          <div><h2 class="h3">¿Ya tienes tu plan?</h2><p class="mb-md-0">Completa el formulario y solicita tu reserva.</p></div>
+          <a href="reservas.html" class="btn btn-naranja btn-lg">Ir a reservas <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
   </main>
 
-<footer>
-  <section>
-    <h2>Rueda Libre</h2>
-    <p>Alquiler de bicicletas en Medellín.</p>
-    <p>&copy; 2026 Rueda Libre</p>
-  </section>
-
-  <section>
-    <h2>Contacto</h2>
-    <address>
-      <a href="mailto:hola@ruedalibre.ejemplo">hola@ruedalibre.ejemplo</a>
-    </address>
-  </section>
-
-  <section>
-    <h2>Horario</h2>
-    <p>Lunes a viernes: 7:00 a. m. a 7:00 p. m.</p>
-    <p>Sábados, domingos y festivos: 6:00 a. m. a 2:00 p. m.</p>
-  </section>
-</footer>
-
-  <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  <footer class="site-footer py-4"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>Rueda Libre · Alquiler de bicicletas en Medellín</span><a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a><span>&copy; 2026</span></div></footer>
+  <a class="whatsapp-button" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Rueda Libre por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
