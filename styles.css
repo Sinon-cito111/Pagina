@@ -275,3 +275,268 @@ a {
     padding: 0.7rem 0.9rem;
   }
 }
+
+:root {
+  --ruta-verde: #1E7A4F;
+  --pedal-naranja: #F39A2B;
+  --azul-noche: #14213D;
+  --crema: #FAF6EF;
+  --gris-asfalto: #5B6470;
+
+  /* Integración con Bootstrap */
+  --bs-primary: #1E7A4F;
+  --bs-primary-rgb: 30, 122, 79;
+  --bs-body-bg: #FAF6EF;
+  --bs-body-color: #14213D;
+  --bs-secondary-color: #5B6470;
+  --bs-link-color: #1E7A4F;
+  --bs-link-hover-color: #155C3B;
+}
+
+body {
+  background-color: var(--crema);
+  color: var(--azul-noche);
+}
+
+p,
+.text-muted {
+  color: var(--gris-asfalto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--azul-noche);
+}
+
+a {
+  color: var(--ruta-verde);
+}
+
+a:hover {
+  color: #155C3B;
+}
+
+header,
+.navbar {
+  background-color: var(--azul-noche) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: var(--crema);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--pedal-naranja);
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--ruta-verde);
+  --bs-btn-border-color: var(--ruta-verde);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #155C3B;
+  --bs-btn-hover-border-color: #155C3B;
+}
+
+.btn-naranja,
+.btn-warning {
+  color: var(--azul-noche);
+  background-color: var(--pedal-naranja);
+  border-color: var(--pedal-naranja);
+  font-weight: 700;
+}
+
+.btn-naranja:hover,
+.btn-warning:hover {
+  color: var(--azul-noche);
+  background-color: #E58A18;
+  border-color: #E58A18;
+}
+
+.btn-outline-primary {
+  color: var(--ruta-verde);
+  border-color: var(--ruta-verde);
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--ruta-verde);
+  border-color: var(--ruta-verde);
+}
+
+.bg-dark {
+  background-color: var(--azul-noche) !important;
+}
+
+.text-light {
+  color: var(--crema) !important;
+}
+
+.bg-crema {
+  background-color: var(--crema) !important;
+}
+
+.bg-noche {
+  background-color: var(--azul-noche) !important;
+}
+
+.card,
+.benefit-card {
+  background-color: #fff;
+  border-color: rgba(20, 33, 61, 0.12);
+}
+
+.card-title {
+  color: var(--azul-noche);
+}
+
+.card-text {
+  color: var(--gris-asfalto);
+}
+
+.page-hero,
+.hero-section {
+  background-color: var(--crema);
+}
+
+.cta-panel {
+  background-color: var(--azul-noche);
+  color: var(--crema);
+}
+
+.cta-panel h2,
+.cta-panel p {
+  color: var(--crema);
+}
+
+.table thead th {
+  color: var(--crema);
+  background-color: var(--azul-noche);
+}
+
+.table {
+  --bs-table-bg: #fff;
+  --bs-table-color: var(--azul-noche);
+}
+
+.form-label {
+  color: var(--azul-noche);
+  font-weight: 600;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--ruta-verde);
+  box-shadow: 0 0 0 0.25rem rgba(30, 122, 79, 0.2);
+}
+
+.site-footer {
+  background-color: var(--azul-noche);
+  color: var(--crema);
+}
+
+.site-footer h2,
+.site-footer p,
+.site-footer span,
+.site-footer a {
+  color: var(--crema);
+}
+
+
+.badge {
+  background-color: var(--ruta-verde);
+}
+
+.eyebrow,
+.feature-icon,
+.benefit-card > i {
+  color: var(--ruta-verde);
+}
+
+:focus-visible {
+  outline: 3px solid var(--pedal-naranja);
+  outline-offset: 3px;
+}
+/* TABLA DE PRECIOS */
+
+.tabla-precios-wrapper {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow-x: auto;
+    box-shadow: 0 5px 20px rgba(20, 33, 61, 0.09);
+    margin: 30px 0;
+}
+
+.tabla-precios {
+    margin-bottom: 0;
+    min-width: 650px;
+}
+
+.tabla-precios thead th {
+    background-color: #14213D;
+    color: #FAF6EF;
+    padding: 22px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+}
+
+.tabla-precios tbody td {
+    padding: 18px 25px;
+    color: #5B6470;
+    font-size: 15px;
+    border-bottom: 1px solid #eeeae3;
+}
+
+.tabla-precios tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-precios tbody tr:hover {
+    background-color: #FAF6EF;
+}
+
+.bicicleta-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 190px;
+}
+
+.bicicleta-info img {
+    width: 65px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.bicicleta-info span {
+    color: #14213D;
+    font-weight: 600;
+}
+
+.precio-tabla {
+    display: inline-block;
+    background-color: #fff0dc;
+    color: #D9780C;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.fila-destacada {
+    background-color: #FAF6EF;
+}
+
+.fila-destacada .bicicleta-info span {
+    color: #1E7A4F;
+}
+
+.nota-tarifas {
+    color: #5B6470;
+    font-size: 14px;
+    margin-top: 15px;
+}

@@ -24,14 +24,13 @@
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
         <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1" aria-hidden="true"></i>Inicio</a></li>
         <li class="nav-item"><a class="nav-link active" href="tarifas.html" aria-current="page"><i class="bi bi-currency-dollar me-1" aria-hidden="true"></i>Tarifas y rutas</a></li>
-        <li class="nav-item"><a class="nav-link " href="reservas.html" ><i class="bi bi-calendar-check me-1" aria-hidden="true"></i>Reservas</a></li>
         <li class="nav-item ms-lg-2"><a class="btn btn-naranja btn-sm" href="reservas.html">Reservar <i class="bi bi-arrow-right" aria-hidden="true"></i></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-  <main id="contenido">
+<main id="contenido">
     <section class="page-hero py-5">
       <div class="container">
         <span class="eyebrow">Planea tu recorrido</span>
@@ -40,36 +39,97 @@
       </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-5 bg-crema" aria-labelledby="flota-ampliada-titulo">
       <div class="container">
-        <div class="section-heading mb-4"><h2>Tarifas de alquiler</h2><p>Precios por hora según el tipo de bicicleta.</p></div>
-        <div class="table-responsive shadow-sm rounded-3">
-          <table class="table table-striped table-hover align-middle mb-0">
-            <caption class="caption-top px-3">Tarifas de alquiler por hora en pesos colombianos.</caption>
-            <thead class="table-dark"><tr><th scope="col">Bicicleta</th><th scope="col">Descripción</th><th scope="col">Precio por hora</th><th scope="col">Reserva</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Urbana Clásica</th><td>Cómoda y liviana para las ciclorrutas.</td><td>$10.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
-              <tr><th scope="row">Urbana Plegable</th><td>Ideal para combinar con el metro.</td><td>$12.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
-              <tr><th scope="row">Montaña Trail</th><td>Suspensión delantera y 21 cambios.</td><td>$15.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
-              <tr><th scope="row">Gravel Aventura</th><td>Para rutas mixtas de asfalto y destapado.</td><td>$18.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
-              <tr><th scope="row">Eléctrica Urbana</th><td>Asistencia eléctrica con 45 km de autonomía.</td><td>$25.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
-              <tr><th scope="row">Infantil</th><td>Para niños de 6 a 10 años.</td><td>$8.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
-              <tr><th scope="row">Tándem</th><td>Para dos personas.</td><td>$20.000</td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
-            </tbody>
-          </table>
+        <div class="section-heading mb-4">
+          <span class="eyebrow">Más opciones para tu recorrido</span>
+          <h2 id="flota-ampliada-titulo">Flota ampliada</h2>
+          <p>Consulta las características y el precio por hora de cada bicicleta.</p>
         </div>
-        <p class="form-text mt-2">Las tarifas por día, descuentos y disponibilidad deben confirmarse directamente con Rueda Libre.</p>
+        <div class="tabla-panel">
+          <div class="table-responsive">
+            <table class="table tabla-rueda tabla-flota align-middle mb-0">
+              <caption class="caption-top px-3">Tarifas por hora en pesos colombianos (COP).</caption>
+              <thead><tr><th scope="col">Bicicleta</th><th scope="col">Descripción</th><th scope="col">Precio por hora</th><th scope="col">Reserva</th></tr></thead>
+              <tbody>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Urbana Clásica</span></th><td>Cómoda y liviana para las ciclorrutas.</td><td><span class="precio-tabla">$10.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Urbana Plegable</span></th><td>Se dobla en segundos; ideal para combinar con el metro.</td><td><span class="precio-tabla">$12.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Montaña Trail</span></th><td>Suspensión delantera y 21 cambios para las subidas.</td><td><span class="precio-tabla">$15.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Gravel Aventura</span></th><td>Para rutas mixtas de asfalto y destapado.</td><td><span class="precio-tabla">$18.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-lightning-charge" aria-hidden="true"></i>Eléctrica Urbana</span></th><td>Asistencia eléctrica con 45 km de autonomía.</td><td><span class="precio-tabla">$25.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Infantil</span></th><td>Para niños de 6 a 10 años.</td><td><span class="precio-tabla">$8.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="tours" class="py-5 bg-crema">
+
+<p class="nota-tarifas">
+    <i class="bi bi-info-circle"></i>
+    Todos los precios están expresados en pesos colombianos (COP) por hora.
+</p>
+    </section>
+
+    <section class="page-hero py-5">
       <div class="container">
-        <div class="section-heading mb-4"><h2>Rutas y recorridos</h2><p>Elige el nivel que mejor se adapte a tu experiencia.</p></div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col"><article class="card h-100 shadow-sm"><img src="../img/rio-parques.jpg" class="card-img-top card-image" alt="Recorrido Río y Parques"><div class="card-body d-flex flex-column"><span class="badge text-bg-success align-self-start mb-2">Fácil</span><h3 class="h5">Río y Parques</h3><p>Un recorrido tranquilo para disfrutar los espacios verdes de la ciudad.</p><a href="reservas.html" class="btn btn-outline-primary mt-auto">Consultar disponibilidad</a></div></article></div>
-          <div class="col"><article class="card h-100 shadow-sm"><img src="../img/sabores-barrio.jpg" class="card-img-top card-image" alt="Recorrido Sabores de Barrio"><div class="card-body d-flex flex-column"><span class="badge text-bg-warning align-self-start mb-2">Medio</span><h3 class="h5">Sabores de Barrio</h3><p>Conoce la ciudad y su cultura a través de un recorrido de nivel medio.</p><a href="reservas.html" class="btn btn-outline-primary mt-auto">Consultar disponibilidad</a></div></article></div>
-          <div class="col"><article class="card h-100 shadow-sm"><img src="../img/reto-palmas.jpg" class="card-img-top card-image" alt="Recorrido Reto Las Palmas"><div class="card-body d-flex flex-column"><span class="badge text-bg-danger align-self-start mb-2">Difícil</span><h3 class="h5">Reto Las Palmas</h3><p>Una ruta exigente para quienes buscan un desafío sobre la bicicleta.</p><a href="reservas.html" class="btn btn-outline-primary mt-auto">Consultar disponibilidad</a></div></article></div>
+        <span class="eyebrow">Planea tu recorrido</span>
+        <h1 class="display-5 fw-bold">Tarifas y rutas</h1>
+        <p class="lead mb-0">Encuentra una bicicleta para tu plan y descubre Medellín a tu ritmo.</p>
+      </div>
+    </section>
+
+    <section class="py-5 bg-crema" aria-labelledby="flota-ampliada-titulo">
+      <div class="container">
+        <div class="section-heading mb-4">
+          <span class="eyebrow">Más opciones para tu recorrido</span>
+          <h2 id="flota-ampliada-titulo">Flota ampliada</h2>
+          <p>Consulta las características y el precio por hora de cada bicicleta.</p>
         </div>
+        <div class="tabla-panel">
+          <div class="table-responsive">
+            <table class="table tabla-rueda tabla-flota align-middle mb-0">
+              <caption class="caption-top px-3">Tarifas por hora en pesos colombianos (COP).</caption>
+              <thead><tr><th scope="col">Bicicleta</th><th scope="col">Descripción</th><th scope="col">Precio por hora</th><th scope="col">Reserva</th></tr></thead>
+              <tbody>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Urbana Clásica</span></th><td>Cómoda y liviana para las ciclorrutas.</td><td><span class="precio-tabla">$10.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Urbana Plegable</span></th><td>Se dobla en segundos; ideal para combinar con el metro.</td><td><span class="precio-tabla">$12.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Montaña Trail</span></th><td>Suspensión delantera y 21 cambios para las subidas.</td><td><span class="precio-tabla">$15.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Gravel Aventura</span></th><td>Para rutas mixtas de asfalto y destapado.</td><td><span class="precio-tabla">$18.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-lightning-charge" aria-hidden="true"></i>Eléctrica Urbana</span></th><td>Asistencia eléctrica con 45 km de autonomía.</td><td><span class="precio-tabla">$25.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+                <tr><th scope="row"><span class="tipo-bici"><i class="bi bi-bicycle" aria-hidden="true"></i>Infantil</span></th><td>Para niños de 6 a 10 años.</td><td><span class="precio-tabla">$8.000</span></td><td><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tours" class="py-5" aria-labelledby="rutas-titulo">
+      <div class="container">
+        <div class="section-heading mb-4">
+          <span class="eyebrow">Descubre Medellín sobre ruedas</span>
+          <h2 id="rutas-titulo">Rutas y recorridos</h2>
+          <p>Compara la distancia, duración, dificultad y precio de cada experiencia.</p>
+        </div>
+        <div class="tabla-panel">
+          <div class="table-responsive">
+            <table class="table tabla-rueda tabla-rutas align-middle mb-0">
+              <caption class="caption-top px-3">Haz clic en el nombre de una ruta para consultar sus detalles.</caption>
+              <thead><tr><th scope="col">Ruta</th><th scope="col">Dificultad</th><th scope="col">Información</th></tr></thead>
+              <tbody>
+                <tr><th scope="row"><button class="ruta-toggle" type="button" aria-expanded="false" aria-controls="detalle-rio-parques" data-route-toggle="detalle-rio-parques">Río y Parques <i class="bi bi-chevron-down" aria-hidden="true"></i></button></th><td><span class="nivel nivel-facil">Fácil</span></td><td><span class="text-muted small">Selecciona para ver detalles</span></td></tr>
+                <tr class="ruta-detalle-row" id="detalle-rio-parques" hidden><td colspan="3"><div class="ruta-detalle"><div><span>Distancia</span><strong>12 km</strong></div><div><span>Duración</span><strong>2 h</strong></div><div><span>Precio</span><strong class="precio-tabla">$45.000</strong></div><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></div></td></tr>
+                <tr><th scope="row"><button class="ruta-toggle" type="button" aria-expanded="false" aria-controls="detalle-sabores-barrio" data-route-toggle="detalle-sabores-barrio">Sabores de Barrio <i class="bi bi-chevron-down" aria-hidden="true"></i></button></th><td><span class="nivel nivel-medio">Medio</span></td><td><span class="text-muted small">Selecciona para ver detalles</span></td></tr>
+                <tr class="ruta-detalle-row" id="detalle-sabores-barrio" hidden><td colspan="3"><div class="ruta-detalle"><div><span>Distancia</span><strong>18 km</strong></div><div><span>Duración</span><strong>3 h</strong></div><div><span>Precio</span><strong class="precio-tabla">$60.000</strong></div><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></div></td></tr>
+                <tr><th scope="row"><button class="ruta-toggle" type="button" aria-expanded="false" aria-controls="detalle-reto-palmas" data-route-toggle="detalle-reto-palmas">Reto Las Palmas <i class="bi bi-chevron-down" aria-hidden="true"></i></button></th><td><span class="nivel nivel-dificil">Difícil</span></td><td><span class="text-muted small">Selecciona para ver detalles</span></td></tr>
+                <tr class="ruta-detalle-row" id="detalle-reto-palmas" hidden><td colspan="3"><div class="ruta-detalle"><div><span>Distancia</span><strong>25 km</strong></div><div><span>Duración</span><strong>4 h</strong></div><div><span>Precio</span><strong class="precio-tabla">$85.000</strong></div><a class="btn btn-sm btn-primary" href="reservas.html">Reservar</a></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="form-text mt-3">Los precios de las rutas corresponden al recorrido indicado.</p>
       </div>
     </section>
 
@@ -85,6 +145,18 @@
 
   <footer class="site-footer py-4"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>Rueda Libre · Alquiler de bicicletas en Medellín</span><a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a><span>&copy; 2026</span></div></footer>
   <a class="whatsapp-button" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Rueda Libre por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+  <script>
+    document.querySelectorAll('[data-route-toggle]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const detail = document.getElementById(button.dataset.routeToggle);
+        const open = button.getAttribute('aria-expanded') === 'true';
+        detail.hidden = open;
+        button.setAttribute('aria-expanded', String(!open));
+        button.querySelector('i').classList.toggle('bi-chevron-down', open);
+        button.querySelector('i').classList.toggle('bi-chevron-up', !open);
+      });
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
