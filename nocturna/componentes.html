@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kit de componentes de Rueda Nocturna: botones, card, alertas y campos de formulario.">
+  <title>Kit de componentes | Rueda Nocturna</title>
+  <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="bg-[#14213D] text-[#FAF6EF]">
+  <main class="mx-auto flex max-w-3xl flex-col gap-16 px-6 py-16">
+
+    <header>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Kit de componentes</h1>
+      <p class="mt-2 max-w-xl text-lg text-[#FAF6EF]/80">
+        Todos los componentes de Rueda Nocturna en una sola página, para revisar que compartan radios, espaciado y colores.
+      </p>
+    </header>
+
+    <section>
+      <h2 class="text-3xl font-extrabold tracking-tight">Botones</h2>
+      <div class="mt-6 flex flex-wrap items-center gap-6">
+
+        <button type="button" class="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-[#F39A2B] px-8 py-3 text-lg font-bold text-[#14213D] transition-colors hover:bg-[#F5AE55] active:bg-[#E48B14] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#FAF6EF]">
+          Principal
+        </button>
+
+        <button type="button" class="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-[#FAF6EF]/10 px-8 py-3 text-lg font-bold text-[#FAF6EF] transition-colors hover:bg-[#FAF6EF]/20 active:bg-[#FAF6EF]/30 focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#FAF6EF]">
+          Secundario
+        </button>
+
+        <button type="button" class="inline-flex items-center justify-center rounded-full border-2 border-[#FAF6EF] px-8 py-3 text-lg font-bold text-[#FAF6EF] transition-colors hover:bg-[#FAF6EF] hover:text-[#14213D] active:bg-[#E6DFD2] active:text-[#14213D] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#FAF6EF]">
+          Contorno
+        </button>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-extrabold tracking-tight">Card de ruta</h2>
+      <div class="mt-6">
+
+        <article class="w-full max-w-xl overflow-hidden rounded-2xl border border-[#FAF6EF]/20 bg-[#FAF6EF]/5 transition hover:border-[#F39A2B] hover:shadow-2xl hover:shadow-black/50 focus-within:border-[#F39A2B]">
+          <img src="img/luces-del-centro.svg" alt="Ilustración nocturna de edificios del centro de Medellín con ventanas iluminadas" width="800" height="400" class="h-48 w-full object-cover">
+          <div class="flex flex-col gap-4 p-6">
+            <p class="w-fit rounded-full bg-[#6EE7B7] px-3 py-1 text-sm font-bold text-[#14213D]">Nivel: Fácil</p>
+            <h3 class="text-2xl font-extrabold">Luces del Centro</h3>
+            <dl class="grid grid-cols-[auto_1fr] items-baseline gap-x-4 gap-y-2">
+              <dt class="text-sm text-[#FAF6EF]/80">Distancia</dt>
+              <dd class="text-lg font-bold">10 km</dd>
+              <dt class="text-sm text-[#FAF6EF]/80">Duración</dt>
+              <dd class="text-lg font-bold">2 h</dd>
+              <dt class="text-sm text-[#FAF6EF]/80">Punto de encuentro</dt>
+              <dd class="text-lg font-bold">Sede de Rueda Libre</dd>
+            </dl>
+            <p class="text-3xl font-extrabold text-[#F39A2B]">$55.000</p>
+            <a href="../paginas/reservas.html" class="mt-2 inline-flex w-full items-center justify-center rounded-full border-2 border-transparent bg-[#F39A2B] px-8 py-3 text-lg font-bold text-[#14213D] transition-colors hover:bg-[#F5AE55] active:bg-[#E48B14] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#FAF6EF]">
+              Inscríbete
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-extrabold tracking-tight">Alertas</h2>
+      <div class="mt-6 flex flex-col gap-4">
+
+        <div class="rounded-2xl border-l-8 border-[#7DD3FC] bg-[#7DD3FC]/10 p-4">
+          <p class="text-lg font-bold text-[#7DD3FC]">Información</p>
+          <p class="mt-2">Las salidas son de jueves a sábado desde la sede de Rueda Libre.</p>
+        </div>
+
+        <div role="alert" class="rounded-2xl border-l-8 border-[#6EE7B7] bg-[#6EE7B7]/10 p-4">
+          <p class="text-lg font-bold text-[#6EE7B7]">Inscripción enviada</p>
+          <p class="mt-2">Tu inscripción quedó registrada. Te enviaremos la confirmación al correo.</p>
+        </div>
+
+        <div class="rounded-2xl border-l-8 border-[#F39A2B] bg-[#F39A2B]/10 p-4">
+          <p class="text-lg font-bold text-[#F39A2B]">Advertencia</p>
+          <p class="mt-2">Recuerda llevar tu documento de identidad al reclamar la bicicleta.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-extrabold tracking-tight">Campos de formulario</h2>
+      <form action="#" class="mt-6 flex max-w-xl flex-col gap-6">
+
+        <div>
+          <label for="correo" class="block text-lg font-bold">Correo electrónico</label>
+          <input id="correo" name="correo" type="email" autocomplete="email" placeholder="nombre@correo.com" aria-describedby="correo-ayuda" class="mt-2 block w-full rounded-2xl border-2 border-[#FAF6EF]/50 bg-[#14213D] px-4 py-3 text-lg text-[#FAF6EF] transition-colors placeholder:text-[#FAF6EF]/60 focus:border-[#F39A2B] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#FAF6EF]">
+          <p id="correo-ayuda" class="mt-2 text-sm text-[#FAF6EF]/80">Te enviaremos aquí la confirmación de tu inscripción.</p>
+        </div>
+
+        <div>
+          <label for="celular" class="block text-lg font-bold">Celular</label>
+          <input id="celular" name="celular" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" pattern="3[0-9]{9}" placeholder="3001234567" aria-describedby="celular-ayuda" class="mt-2 block w-full rounded-2xl border-2 border-[#FAF6EF]/50 bg-[#14213D] px-4 py-3 text-lg text-[#FAF6EF] transition-colors placeholder:text-[#FAF6EF]/60 focus:border-[#F39A2B] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#FAF6EF]">
+          <p id="celular-ayuda" class="mt-2 text-sm text-[#FAF6EF]/80">10 números que empiecen por 3, sin espacios ni guiones.</p>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>
