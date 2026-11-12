@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* El prototipo con Play CDN no forma parte del CSS de producción */
+@source not "../prototipo.html";
+
+/* ===== Marca: colores y tipografías ===== */
+@theme {
+  --color-verde-ruta: #1E7A4F;
+  --color-naranja-pedal: #F39A2B;
+  --color-azul-noche: #14213D;
+  --color-crema: #FAF6EF;
+  --color-gris-asfalto: #5B6470;
+  --color-amarillo-farol: #FFD166;
+
+  --font-titulos: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-texto: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ===== Base: títulos y foco visible ===== */
+@layer base {
+  h1, h2, h3 {
+    font-family: var(--font-titulos);
+  }
+
+  :where(a, button, input):focus-visible {
+    outline: 4px solid var(--color-azul-noche);
+    outline-offset: 4px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :where(a, button, input):focus-visible {
+      outline-color: var(--color-crema);
+    }
+  }
+}
+
+/* ===== Componentes: los tres botones del kit ===== */
+@layer components {
+  .btn-principal {
+    @apply inline-flex items-center justify-center px-8 py-3 text-lg font-bold rounded-full border-2 border-transparent bg-verde-ruta text-crema transition-colors hover:bg-azul-noche active:bg-gris-asfalto dark:bg-naranja-pedal dark:text-azul-noche dark:hover:bg-amarillo-farol dark:active:bg-crema;
+  }
+
+  .btn-secundario {
+    @apply inline-flex items-center justify-center px-8 py-3 text-lg font-bold rounded-full border-2 border-transparent bg-azul-noche/10 text-azul-noche transition-colors hover:bg-azul-noche/20 active:bg-azul-noche/30 dark:bg-crema/10 dark:text-crema dark:hover:bg-crema/20 dark:active:bg-crema/30;
+  }
+
+  .btn-contorno {
+    @apply inline-flex items-center justify-center px-8 py-3 text-lg font-bold rounded-full border-2 border-azul-noche text-azul-noche transition-colors hover:bg-azul-noche hover:text-crema active:bg-gris-asfalto active:text-crema dark:border-crema dark:text-crema dark:hover:bg-crema dark:hover:text-azul-noche dark:active:bg-amarillo-farol dark:active:text-azul-noche;
+  }
+}
