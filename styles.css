@@ -540,3 +540,49 @@ header,
     font-size: 14px;
     margin-top: 15px;
 }
+
+.carousel-caption h3 {
+  color: var(--pedal-naranja); 
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); 
+}
+
+.carousel-caption p {
+  color: var(--crema); 
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+  font-weight: 600;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--ruta-verde); 
+  border-radius: 50%;
+  padding: 1.5rem; 
+  background-size: 1.5rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--pedal-naranja); 
+  height: 5px; 
+  opacity: 0.6;
+}
+
+.carousel-indicators .active {
+  background-color: var(--ruta-verde); 
+  opacity: 1;
+}
+.hero-bg {
+  background: linear-gradient(rgba(20, 33, 61, 0.7), rgba(20, 33, 61, 0.7)), url('img/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 70vh; 
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg .eyebrow {
+  color: var(--pedal-naranja) !important;
+}
